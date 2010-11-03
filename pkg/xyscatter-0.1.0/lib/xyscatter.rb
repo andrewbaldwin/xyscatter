@@ -5,6 +5,7 @@ module XYscatter
 
   def self.xyscatter(options)
         points=options[:points] || [[0,0],[100,100]]
+        background=options[:background] || 'black'
 	scale=options[:scale] || 5
 	filename=options[:filename]|| '/tmp/sactter.gif'
 	pointcolour=options[:pointcolour] || '#fedcba'
@@ -22,7 +23,7 @@ module XYscatter
 #scale=5, filename='/tmp/scatter.gif', pointcolour='#fedcba'
 				#create a canvas
      csize=(gscale)+2
-     f=Image.new(csize,csize) {self.background_color="black"}
+     f=Image.new(csize,csize) {self.background_color=background}
 				#create a drawing
      scat=Draw.new
 

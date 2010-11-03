@@ -9,9 +9,10 @@ usage
   where params is a hash containing
   
   :points => 2d array of data points [ [x1,y1],[x2,y2] ..[xn,yn] ]
+  :background => background colour (default black)
   :scale => integer (default 5) makes resulting image scale*100 points square
   :pointcolour => colour name or html hex code, default #fedcba
-  :ticks => number of ticks on each axis (default 10)
+  :ticks => number of ticks on each axis - minimum 1 (default 10)
   :tickcolour => colour used for ticks (default #ffffff)
   :minx => lower bound for x for plotting (default 0)
   :maxx => upper bound for x for plotting (default 100)
@@ -20,6 +21,11 @@ usage
   :filename => output file name (default /tmp/scatter.gif)
   
   Only the :points setting is needed
+
+  Note: The package does not check for sensible values 
+  so if you set the pointcolour and background to the same or close values
+  you won't see very much 
+  
   
   XYscatter::testxyscatter is a simple test driver 
   
