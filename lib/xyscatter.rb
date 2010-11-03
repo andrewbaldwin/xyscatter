@@ -3,6 +3,65 @@ module XYscatter
   require 'RMagick'
   include Magick
 
+#Routine to generate an image with a simple XY scatter plot.
+#the image is square  and set to 100x the scale option
+#
+# version 0.1.0			20101103
+#
+#
+# It was written by Andrew Baldwin who asserts copyright.
+#
+# Use 
+# 
+# You may use it in any way you wish so long as this header text
+# is reproduced in its entirety and any changes are clearly marked.
+#
+# If you find errors and/or make improvements, I'd appreciate it
+# if you'd send me a copy of the revised version.
+#
+# If you use this in a commercial and/or non free product, please
+# make a donation to a charity of your choice (ideally one which
+# is connected to relief of suffering and/or improvement of the
+# environment); there is no obligation to do this - just your
+# conscience.
+#
+# If you find it useful and if we should ever meet you can buy me
+# a nice cup of tea :-)
+#
+#	Andrew Baldwin    andrew.baldwin@bcs.org.uk
+#~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+#
+#usage
+#
+#  require 'xyscatter'
+#  
+#  XYscatter::xyscatter({params})
+#  
+#  where params is a hash containing
+#  
+#  :points => 2d array of data points [ [x1,y1],[x2,y2] ..[xn,yn] ]
+#  :background => background colour (default black)
+#  :scale => integer (default 5) makes resulting image scale*100 points square
+#  :pointcolour => colour name or html hex code, default #fedcba
+#  :ticks => number of ticks on each axis - minimum 1 (default 10)
+#  :tickcolour => colour used for ticks (default #ffffff)
+#  :minx => lower bound for x for plotting (default 0)
+#  :maxx => upper bound for x for plotting (default 100)
+#  :miny => lower bound for y for plotting (default 0)
+#  :maxy => upper bound for y for plotting (default 100)
+#  :filename => output file name (default /tmp/scatter.gif)
+#  
+#  Only the :points setting is needed#
+#
+#  Note: The package does not check for sensible values 
+#  so if you set the pointcolour and background to the same or close values
+#  you won't see very much 
+
+
+
+
+
   def self.xyscatter(options)
         points=options[:points] || [[0,0],[100,100]]
         background=options[:background] || 'black'
@@ -20,7 +79,6 @@ module XYscatter
         gscale=scale*100
 
 
-#scale=5, filename='/tmp/scatter.gif', pointcolour='#fedcba'
 				#create a canvas
      csize=(gscale)+2
      f=Image.new(csize,csize) {self.background_color=background}
@@ -69,7 +127,5 @@ module XYscatter
  	puts "done"
     end #def
 
-#puts "starting"
-#testscatter
 
 end #module
