@@ -1,0 +1,25 @@
+xyscatter gem
+
+usage
+
+  require 'xyscatter'
+  
+  XYscatter::xyscatter({params})
+  
+  where params is a hash containing
+  
+  :points => 2d array of data points [ [x1,y1],[x2,y2] ..[xn,yn] ]
+  :scale => integer (default 5) makes resulting image scale*100 points square
+  :pointcolour => colour name or html hex code, default #fedcba
+  :ticks => number of ticks on each axis (default 10)
+  :tickcolour => colour used for ticks (default #ffffff)
+  :minx => lower bound for x for plotting (default 0)
+  :maxx => upper bound for x for plotting (default 100)
+  :miny => lower bound for y for plotting (default 0)
+  :maxy => upper bound for y for plotting (default 100)
+  :filename => output file name (default /tmp/scatter.gif)
+  
+  Only the :points setting is needed
+  
+  XYscatter::testxyscatter is a simple test driver 
+  
