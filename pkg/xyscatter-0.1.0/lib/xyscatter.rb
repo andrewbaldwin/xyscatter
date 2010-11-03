@@ -12,8 +12,8 @@ module XYscatter
         tickcolour=options[:tickcolour] || '#ffffff'
         minx=options[:minx] || 0
         maxx=options[:maxx] || 100
-        miny=options[:minx] || 0
-        maxy=options[:maxx] || 100
+        miny=options[:miny] || 0
+        maxy=options[:maxy] || 100
         xsize=maxx-minx
         ysize=maxy-miny
         gscale=scale*100
