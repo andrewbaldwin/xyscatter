@@ -108,7 +108,8 @@ module XYscatter
         y=((gscale*y).to_f/ysize).to_i
 	y=gscale-y	# gscale - y to flip diagram to normal coordinate system
 	if xyplot[2] then
-	   scat.circle(x,y,x+xyplot[2],y)	#plot a circle with radius xyplot[2]
+           radius=xyplot*scale
+	   scat.circle(x,y,x+radius,y)	#plot a circle with radius xyplot[2] (suitably scaled)
 	else
            scat.rectangle(x,y,(x+2),(y+2))	#plot a simple point (actually a small rectangle to improve visibility
         end
