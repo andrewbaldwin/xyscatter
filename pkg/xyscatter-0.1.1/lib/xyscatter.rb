@@ -101,14 +101,17 @@ module XYscatter
 
 #scale coords plotted_x= ((x-minx)/(maxx-minx))*gscale ; similar for y
      scat.fill(pointcolour)
-     points.each do |pair|
-        x=pair[0]-minx
-        y=pair[1]-miny
+     points.each do |xyplot|
+        x=xyplot[0]-minx
+        y=xyplot[1]-miny
         x=((gscale*x).to_f/xsize).to_i
         y=((gscale*y).to_f/ysize).to_i
 	y=gscale-y	# gscale - y to flip diagram to normal coordinate system
-	#puts "DEBUG x,y plotted x,y: #{pair[0]}\t#{pair[1]}\t#{x}\t#{y}"
-        scat.rectangle(x,y,(x+2),(y+2))
+	if xyplot[2] then
+	   scat.circle(x,y,x+xyplot[2],y)	#plot a circle with radius xyplot[2]
+	else
+           scat.rectangle(x,y,(x+2),(y+2))	#plot a simple point (actually a small rectangle to improve visibility
+        end
      end #do
 
 				#associate drawing object with canvas
