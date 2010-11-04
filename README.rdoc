@@ -11,7 +11,7 @@ usage
   :points => 2d array of data points [ [x1,y1],[x2,y2] ..[xn,yn] ]
   :background => background colour (default black)
   :scale => integer (default 5) makes resulting image scale*100 points square
-  :pointcolour => colour name or html hex code, default #fedcba
+  :pointcolour => colour name or html hex code, (default #fedcba)
   :ticks => number of ticks on each axis - minimum 1 (default 10)
   :tickcolour => colour used for ticks (default #ffffff)
   :minx => lower bound for x for plotting (default 0)
@@ -32,27 +32,28 @@ Extension
    x,y and radius r
   
 Distribution
+
    This was written by Andrew Baldwin who asserts copyright.
-#
-# Use 
-# 
-# You may use it in any way you wish so long as this header text
-# is reproduced in its entirety and any changes are clearly marked.
-# 
-# Any usage is entirely at your own risk. There are no guarantees on its
-# suitability in any case; you must decide if you think it's worth using.
-#
-# If you find errors and/or make improvements, I'd appreciate it
-# if you'd send me a copy of the revised version.
-#
-# If you use this in a commercial and/or non free product, please
-# make a donation to a charity of your choice (ideally one which
-# is connected to relief of suffering and/or improvement of the
-# environment); there is no obligation to do this - just your
-# conscience.
-#
-# If you find it useful and if we should ever meet you can buy me
-# a nice cup of tea :-)
-#
-#	Andrew Baldwin    andrew.baldwin@bcs.org.uk
-#~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+   
+   Use 
+   
+   You may use it in any way you wish so long as this header text
+   is reproduced in its entirety and any changes are clearly marked.
+   
+   Any usage is entirely at your own risk. There are no guarantees on its
+   suitability in any case; you must decide if you think it's worth using.
+  
+   If you find errors and/or make improvements, I'd appreciate it
+   if you'd send me a copy of the revised version.
+  
+   If you use this in a commercial and/or non free product, please
+   make a donation to a charity of your choice (ideally one which
+   is connected to relief of suffering and/or improvement of the
+   environment); there is no obligation to do this - just your
+   conscience.
+  
+   If you find it useful and if we should ever meet you can buy me
+   a nice cup of tea :-)
+  
+  	Andrew Baldwin    andrew.baldwin@bcs.org.uk
+  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
