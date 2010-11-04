@@ -10,7 +10,7 @@ Gem::Specification.new do |s|
   s.description = %q{this provides a generic xy scatter plot (v0.1.1 added bubble functionality)}
   s.email = %q{andrew.baldwin@bcs.org.uk}
   s.extra_rdoc_files = ["README.rdoc", "lib/xyscatter.rb"]
-  s.files = ["README.rdoc", "Rakefile", "lib/xyscatter.rb", "xyscatter.gemspec", "Manifest"]
+  s.files = ["README.rdoc", "Rakefile", "lib/xyscatter.rb", "Manifest", "xyscatter.gemspec"]
   s.homepage = %q{http://github.com/andrewbaldwin/xyscatter}
   s.rdoc_options = ["--line-numbers", "--inline-source", "--title", "Xyscatter", "--main", "README.rdoc"]
   s.require_paths = ["lib"]
