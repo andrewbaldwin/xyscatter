@@ -117,10 +117,10 @@ module XYscatter
      end #do
 
 				#associate drawing object with canvas
-#     scat.draw(f)  
+     scat.draw(f)  
 
      f.write(filename)		#save to file
-     f.display 
+#     f.display 
   end #def
 
     def self.testxyscatter
