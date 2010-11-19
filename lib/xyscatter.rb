@@ -7,6 +7,7 @@ module XYscatter
 #the image is square  and set to 100x the scale option
 #
 # version 0.1.0			20101103
+#         0.1.2			20101119
 #
 #
 # It was written by Andrew Baldwin who asserts copyright.
@@ -116,7 +117,7 @@ module XYscatter
      end #do
 
 				#associate drawing object with canvas
-     scat.draw(f)  
+#     scat.draw(f)  
 
      f.write(filename)		#save to file
      f.display 
