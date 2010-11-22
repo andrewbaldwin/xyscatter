@@ -1,3 +1,4 @@
+
 xyscatter gem
 
 usage
@@ -19,6 +20,7 @@ usage
   :miny => lower bound for y for plotting (default 0)
   :maxy => upper bound for y for plotting (default 100)
   :filename => output file name (default /tmp/scatter.gif)
+  :grid_axes => show grid or just axes (on left/bottom) (default 'axes')
   
   Only the :points setting is needed
 
