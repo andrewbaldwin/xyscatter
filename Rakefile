@@ -3,8 +3,8 @@ require 'rubygems'
 require 'rake'
 require 'echoe'
 
-Echoe.new('xyscatter', '0.1.2') do |p|
-  p.description    = "this provides a generic xy scatter plot (v0.1.1 added bubble functionality)"
+Echoe.new('xyscatter', '0.1.3') do |p|
+  p.description    = "this provides a generic xy scatter plot "
   p.url            = "http://github.com/andrewbaldwin/xyscatter"
   p.author         = "Andrew Baldwin"
   p.email          = "andrew.baldwin@bcs.org.uk"

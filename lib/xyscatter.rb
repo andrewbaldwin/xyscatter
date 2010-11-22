@@ -8,6 +8,7 @@ module XYscatter
 #
 # version 0.1.0			20101103
 #         0.1.2			20101119
+#	  0.1.3			20101122
 #
 #
 # It was written by Andrew Baldwin who asserts copyright.
@@ -52,6 +53,7 @@ module XYscatter
 #  :miny => lower bound for y for plotting (default 0)
 #  :maxy => upper bound for y for plotting (default 100)
 #  :filename => output file name (default /tmp/scatter.gif)
+#  :grid_axes => show grid or  axes (default axes)
 #  
 #  Only the :points setting is needed#
 #
@@ -70,11 +72,13 @@ module XYscatter
 	filename=options[:filename]|| '/tmp/sactter.gif'
 	pointcolour=options[:pointcolour] || '#fedcba'
         ticks=options[:ticks] || 10
+        middletick=ticks/2
         tickcolour=options[:tickcolour] || '#ffffff'
         minx=options[:minx] || 0
         maxx=options[:maxx] || 100
         miny=options[:miny] || 0
         maxy=options[:maxy] || 100
+        grid_axes=options[:grid_axes] || 'axes'
         xsize=maxx-minx
         ysize=maxy-miny
         gscale=scale*100
@@ -93,10 +97,20 @@ module XYscatter
      x=0
      y=gscale
      0.upto(ticks) do |tick|
+        if grid_axes.downcase == 'axes' then
             scat.rectangle(x,98*scale,(x+2),100*scale)
             scat.rectangle(0,y,2*scale,(y+2))
-	    x+=xtickstep
-	    y-=ytickstep
+        else
+          if tick == middletick then
+            scat.rectangle(x,1,(x+2),100*scale)
+            scat.rectangle(0,y,100*scale,(y+2))
+          else
+            scat.rectangle(x,1,(x+1),100*scale)
+            scat.rectangle(0,y,100*scale,(y+1))          
+          end #middletick
+        end    #axes or grid
+	x+=xtickstep
+	y-=ytickstep
      end #do 
 				#plot points
 
